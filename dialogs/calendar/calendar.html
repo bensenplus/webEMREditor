@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+        <style type="text/css">
+            *{color: #838383;margin: 0;padding: 0}
+            html,body {font-size: 12px;overflow: hidden; }
+            .content{padding:5px 0 0 15px;}
+            table td{padding:5px 0;}
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <table>
+                <tr>
+                    <td><var id="name"></var></td>
+                    <td><input id="calendarName" type="text"/></td>
+                </tr>
+                <tr>
+                    <td><var id="formatDate"></var></td>
+                    <td>
+                        <select id="calendarFormat">
+                            <option>YYYY-MM-DD</option>
+                            <option>YYYY年MM月DD日</option>
+                            <option>YYYY-MM-DD hh:mm:ss</option>
+                            <option>YYYY年MM月DD日 hh时mm分ss秒</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="../internal.js"></script>
+        <script type="text/javascript">
+            dialog.onok = function (){
+                var formatObj = document.getElementById('calendarFormat');
+                editor.execCommand('calendar', {
+                        id:document.getElementById('calendarName').value,
+                        istime:formatObj.selectedIndex < 2 ? false:true,
+                        format:formatObj.options[formatObj.selectedIndex].text
+                    });
+                dialog.close();
+            };
+        </script>
+    </body>
+</html>

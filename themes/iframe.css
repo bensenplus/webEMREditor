@@ -1,0 +1,13 @@
+/*可以在这里添加你自己的css*/
+span.bindfield{
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+}
+
+a.dropdownlist{
+    background-color: #d9d5cd;
+}
+
+a.calendar{
+    background-color: #d9d5cd;
+}

@@ -1,0 +1,75 @@
+/* 可选中按钮弹出菜单*/
+.edui-default .edui-dropdownlist {
+    z-index: 3000;
+}
+
+.edui-default .edui-dropdownlist .edui-popup-content {
+    padding: 3px;
+}
+
+.edui-default .edui-dropdownlist-body {
+    _width: 80px;
+    min-width: 80px;
+    /*background: url("../images/sparator_v.png") repeat-y 25px;*/
+}
+
+.edui-default .edui-listitem-body {
+}
+
+.edui-default .edui-listitem {
+    height: 20px;
+    cursor: default;
+    vertical-align: top;
+}
+
+.edui-default .edui-listitem .edui-icon {
+    width: 20px !important;
+    height: 20px !important;
+    background: url(../images/icons.png) 0 -4000px;
+    background: url(../images/icons.gif) 0 -4000px\9;
+}
+
+.edui-default .edui-listitem .edui-label {
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    padding-left: 10px;
+}
+
+.edui-default .edui-state-checked .edui-listitem-body {
+    background: url("../images/icons-all.gif") no-repeat 6px -205px;
+}
+
+.edui-default .edui-state-disabled .edui-listitem-label {
+    color: gray;
+}
+
+/*contextmenu*/
+.edui-default .edui-hassubmenu .edui-arrow {
+    height: 20px;
+    width: 20px;
+    float: right;
+    background: url("../images/icons-all.gif") no-repeat 10px -233px;
+}
+
+.edui-default .edui-dropdownlist-body .edui-menuitem {
+    padding: 1px;
+}
+
+.edui-default .edui-menuseparator {
+    margin: 2px 0;
+    height: 1px;
+    overflow: hidden;
+}
+
+.edui-default .edui-menuseparator-inner {
+    border-bottom: 1px solid #e2e3e3;
+    margin-left: 29px;
+    margin-right: 1px;
+}
+
+.edui-default .edui-dropdownlist-body .edui-state-hover {
+    padding: 0 !important;
+    background-color: #fff5d4;
+    border: 1px solid #dcac6c;
+}

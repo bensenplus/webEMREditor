@@ -1,0 +1,93 @@
+body {
+	background: rgb(247, 247, 247); margin: 0px; padding: 0px;
+}
+a {
+	color: rgb(68, 134, 196); text-decoration: none; cursor: pointer;
+}
+a:hover {
+	
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.header {
+	height: 45px; overflow: hidden; background-color: rgb(109, 195, 234);
+}
+.guide {
+	padding: 0px 20px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-size: 16px; text-decoration: none; float: left;
+}
+.logo.guide {
+	background-position: left; margin: 0px 0px 0px 10px; padding: 0px; width: 137px; height: 45px; font-size: 0px; vertical-align: middle; background-image: url("../images/logo-wendang.png?v=1414653207252"); background-repeat: no-repeat;
+}
+.logo-wenku.guide {
+	background-position: center; margin: 0px; padding: 0px; width: 89px; height: 45px; font-size: 0px; vertical-align: middle; background-image: url("../images/logo-wenku.png?v=1414653207252"); background-repeat: no-repeat;
+}
+.logo.guide:hover {
+	background-color: transparent;
+}
+.logo-wenku.guide:hover {
+	background-color: transparent;
+}
+.active.guide {
+	background-color: rgb(75, 167, 209);
+}
+.guide:hover {
+	background-color: rgb(75, 167, 209);
+}
+.header .center::selection {
+	background: rgb(255, 255, 255);
+}
+.header .center {
+	margin: 0px auto; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-size: 14px; font-weight: normal;
+}
+.header .left {
+	-ms-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; user-select: none;
+}
+.header .right {
+	-ms-user-select: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; user-select: none;
+}
+.header .right a {
+	padding: 0px 10px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 50px; font-size: 14px; text-decoration: none; float: left;
+}
+.header .right a:hover {
+	color: rgb(172, 219, 255);
+}
+.header .right a.upload {
+	padding: 0px; height: 20px; line-height: 20px;
+}
+.header .useravatar {
+	margin: 3px 3px 3px 0px; border-radius: 50%; border: 2px solid rgb(247, 247, 247); border-image: none; width: 35px; height: 35px; float: left; display: block; background-image: url("../images/avater.jpg"); background-size: contain;
+}
+.header .useravatar {
+	display: none;
+}
+.header .username {
+	display: none;
+}
+.header .userlogout {
+	display: none;
+}
+.footer {
+	margin: 20px 0px; text-align: center; color: rgb(153, 153, 153); font-size: 12px;
+}
+.main {
+	text-align: center;
+}
+.main .container {
+	background: rgb(254, 254, 254); margin: 10px auto; padding: 0px; width: 900px; text-align: left;
+}
+.main .editor.container {
+	border-radius: 3px; clear: both; box-shadow: none;
+}
+.main .edui-editor-toolbarbox {
+	position: absolute;
+}
+body.loading::before {
+	background: rgba(128, 130, 140, 0.75); left: 0px; top: 45px; right: 0px; bottom: 0px; display: block; position: absolute; z-index: 12; content: " ";
+}
+body.loading::after {
+	border-width: 4px; border-style: solid; border-color: rgb(255, 255, 255) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0); border-radius: 100%; animation:rotate 1.33s infinite; border-image: none; left: 50%; top: 50%; width: 40px; height: 40px; margin-top: -2px; margin-left: -24px; position: absolute; z-index: 12; content: " "; box-shadow: 0px 0px 35px #fff; -webkit-animation: rotate 1.33s ease infinite;
+}

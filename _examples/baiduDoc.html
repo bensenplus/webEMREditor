@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0022)http://word.baidu.com/ -->
+<!DOCTYPE html PUBLIC "" >
+<HTML lang="en">
+<HEAD>
+    <META content="IE=11.0000"  http-equiv="X-UA-Compatible">
+
+    <META charset="UTF-8">
+    <TITLE>电子病历</TITLE>
+
+    <!-- lib/jquery -->
+    <SCRIPT src="../word/jquery-1.11.1.min.js" type="text/javascript"></SCRIPT>
+
+    <!-- lib/fio -->
+    <!--<SCRIPT src="../word/promise-1.0.0.js"></SCRIPT>-->
+    <!--<SCRIPT src="../word/fio.min.js"></SCRIPT>-->
+
+    <script type="text/javascript" charset="utf-8" src="editor_api.js"> </script>
+
+    <SCRIPT src="../word/zh-cn.js" type="text/javascript"></SCRIPT>
+
+    <SCRIPT src="../word/jhtmls.min.js"></SCRIPT>
+
+    <SCRIPT src="../word/fui.all.min.js"></SCRIPT>
+    <LINK href="../word/fui.min.css" rel="stylesheet" type="text/css">
+
+    <!-- wordonline -->
+    <LINK href="../themes/default/_css/wordonline.min.css" rel="stylesheet">
+    <SCRIPT src="../word/wordonline.min.js"></SCRIPT>
+
+    <!-- index.php -->
+    <LINK href="../word/public.css"  rel="stylesheet">
+    <LINK href="../word/index.css" rel="stylesheet">
+</HEAD>
+
+<BODY>
+<DIV id="content-wrapper">
+    <DIV class="header" id="header"></DIV>
+    <DIV class="toolbar" id="toolbar"></DIV>
+    <DIV class="main">
+        <DIV class="container editor">
+            <SCRIPT class="wordeditor" id="wordeditor" style="width: 900px; height: 1110px;" type="text/plain"></SCRIPT>
+        </DIV>
+        <DIV class="footer"> WebEMREditor&nbsp;©&nbsp;Founder
+        </DIV>
+    </DIV>
+</DIV>
+<!--百度Doc 启动代码-->
+<SCRIPT type="text/javascript">
+    $(function () {
+        WO.render('toolbar', 'wordeditor');
+    });
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+        <style type="text/css">
+            *{color: #838383;margin: 0;padding: 0}
+            html,body {font-size: 12px;overflow: hidden; }
+            .content{padding:5px 0 0 15px;}
+            input{width:210px;height:21px;line-height:21px;margin-left: 4px;}
+            table td{padding:5px 0;}
+        </style>
+    </head>
+    <body>
+        <div class="content">
+
+            <table>
+                <tr>
+                    <td>ID：</td>
+                    <td><input id="field_id"  value="id001" /></td>
+                </tr>
+                <tr>
+                    <td>标签：</td>
+                    <td><input id="field_label"  value="标签" /></td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="../internal.js"></script>
+        <script type="text/javascript">
+            var node = domUtils.findParentByTagName(editor.selection.getRange().startContainer, 'span', true);
+            if(node && node.attributes['class'] && node.attributes['class'].value == 'bindfield') {
+                $G('field_id').value = node.attributes['id'].value;
+            }else{
+                $G('field_id').value = new Date().getTime();
+            }
+
+            dialog.onok = function (){
+                editor.execCommand('bindfield', {
+                    id:$G('field_id').value,
+                    label:$G('field_label').value
+                    });
+                dialog.close();
+            };
+
+            $focus($G('field_id'));
+        </script>
+    </body>
+</html>

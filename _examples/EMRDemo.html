@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>电子病历demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" charset="utf-8" src="../ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="editor_api.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="../lang/zh-cn/zh-cn.js"></script>
+
+    <style type="text/css">
+        del {
+            text-decoration: none;
+            background: #fadad7;
+            text-decoration: line-through;
+        }
+        ins {
+            background: #eaf2c2;
+            color: #406619;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+<div>
+    <h1>电子病历demo</h1>
+
+
+    <script id="editor" type="text/plain" style="width:1024px;height:500px;">
+<h1 style="margin: 0px 0px 20px; padding: 0px 4px 0px 0px; text-align: center; font-size: 32px; font-weight: bold; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 2px; border-bottom-style: solid;" label="标题居中">
+    <span style="font-family: 微软雅黑,Microsoft YaHei;">北大人民医院</span>
+</h1>
+<h3 style="text-align: center;">
+    门诊病历&nbsp;
+</h3>
+<p>
+    &nbsp;
+</p>
+<p>
+    门诊号：&nbsp;<span class="bindfield" id="id_opt_no">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp; 姓名：&nbsp;&nbsp; <span class="bindfield" id="id_name">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 性别：&nbsp;<a class="dropdownlist" id="sex" listvalue="男&#10;女">男</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 出生日期：&nbsp;<a class="calendar" id="id_birth" istime="false" format="YYYY-MM-DD">1980-02-05</a>
+</p>
+<p>
+    主诉：&nbsp;
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="dropdownlist" id="name" listvalue="有&#10;无">有</a>发热5天，<a class="dropdownlist" id="name" listvalue="有&#10;无">有</a>呕吐现象，<a class="dropdownlist" id="1421744510751" listvalue="头部&#10;腹部&#10;腿部&#10;手臂">头部</a>疼痛。
+</p>
+<p>
+    &nbsp;
+</p>
+<p>
+    查体：
+</p>
+<p>
+    &nbsp;&nbsp; <a class="dropdownlist" id="name" listvalue="有&#10;无">有</a>过敏史&nbsp;,大便<a class="dropdownlist" id="name" listvalue="正常&#10;异常&#10;未查明">正常</a>&nbsp;,<span style="line-height: 0px; display: none;">‍</span>发育<a class="dropdownlist" id="name" listvalue="正常&#10;不正常">正常</a>，营养<a class="dropdownlist" id="name" listvalue="良好&#10;一般&#10;较差">良好</a>，面容<a class="dropdownlist" id="name" listvalue="正常&#10;不正常">正常</a>，自如表情，自主体位，<a class="dropdownlist" id="name" listvalue="正常&#10;不正常">正常</a>步态，神志<a class="dropdownlist" id="name" listvalue="清楚&#10;不清楚">清楚</a>，语态清晰，检查合作。
+</p>
+<p>
+    &nbsp;
+</p>
+<p>
+    处方：
+</p>
+<p>
+    &nbsp;&nbsp; <span class="bindfield" id="id_pre_01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+</p>
+<p>
+    &nbsp;&nbsp; <span class="bindfield" id="id_pre_02">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+</p>
+<p>
+    &nbsp;&nbsp; <span class="bindfield" id="id_pre_03">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+</p>
+<p>
+    &nbsp;&nbsp; <span class="bindfield" id="id_pre_04">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;<span class="bindfield" id="id_pre_05">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;
+</p>
+<p>
+    &nbsp;&nbsp; <span class="bindfield" id="id_pre_06">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</p>
+<p>
+    &nbsp;
+</p>
+    </script>
+</div>
+</body>
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var editor_a = UE.getEditor('editor',{
+        toolbars: [['fullscreen', 'source', '|', 'undo', 'redo', '|',
+        'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+        'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+        'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+        'directionalityltr', 'directionalityrtl', 'indent', '|',
+        'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+        'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+        'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
+        'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+        'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+        'searchreplace', 'drafts',
+        'dropdownlist','bindfield','calendar',
+        '|','print', 'preview','help'
+        ]]
+    });
+
+</script>
+
+<div>
+    <button onclick="prn3_preview()" >打印预览</button>
+    <button onclick="diff()" >比较</button>
+    <button onclick="setValueByID()" >设置信息</button>
+</div>
+
+<table>
+    <tr><td id="result"></td></tr>
+</table>
+
+<script language="javascript" src="../third-party/Lodop/LodopFuncs.js"></script>
+
+<!--文本比较-->
+<script src="../third-party/jsdiff/diff.js" type="text/javascript"></script>
+
+<SCRIPT type="text/javascript">
+
+    var pre_ver_text = null;
+
+
+    function diff(){
+
+
+        var newtxt = editor_a.getPlainTxt();
+        //var newtxt = editor_a.getContent();
+
+
+        var diff = JsDiff['diffChars'](pre_ver_text, newtxt);
+
+        pre_ver_text = newtxt;
+
+
+        var fragment = document.createDocumentFragment();
+        for (var i=0; i < diff.length; i++) {
+
+            if (diff[i].added && diff[i + 1] && diff[i + 1].removed) {
+                var swap = diff[i];
+                diff[i] = diff[i + 1];
+                diff[i + 1] = swap;
+            }
+
+            var node;
+            if (diff[i].removed) {
+                node = document.createElement('del');
+                node.appendChild(document.createTextNode(diff[i].value));
+            } else if (diff[i].added) {
+                node = document.createElement('ins');
+                node.appendChild(document.createTextNode(diff[i].value));
+            } else {
+                node = document.createTextNode(diff[i].value);
+            }
+            fragment.appendChild(node);
+        }
+
+
+        var result = document.getElementById('result');
+
+        result.innerHTML='';
+
+        result.appendChild(fragment);
+
+    }
+
+    function setValueByID(){
+        editor_a.document.getElementById('id_opt_no').innerText= 'NO300013';
+        editor_a.document.getElementById('id_birth').innerText= '1983-04-05';
+        editor_a.document.getElementById('id_name').innerText= '陆 敏';
+        editor_a.document.getElementById('id_pre_01').innerText= '肌苷针剂 0.4克/支 qd ';
+        editor_a.document.getElementById('id_pre_02').innerText= '5%葡萄糖注射液 200ml/支 qd 3支';
+        editor_a.document.getElementById('id_pre_03').innerText= '头孢曲松钠针剂 40ml/支 qd 3支';
+    }
+
+</SCRIPT>
+
+<script language="javascript" type="text/javascript">
+    var LODOP; //声明为全局变量
+    function prn3_preview(){
+        LODOP=getLodop();
+        LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_全页");
+        LODOP.ADD_PRINT_BARCODE(60,10,206,40,"128B","20150101000009");
+        LODOP.ADD_PRINT_HTM(0,0,"100%","100%",UE.getEditor('editor').getContent(null,null,true));
+        LODOP.PREVIEW();
+    };
+</script>
+
+
+</html>

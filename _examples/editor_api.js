@@ -91,6 +91,7 @@
             'plugins/serverparam.js',
             'plugins/insertfile.js',
             'plugins/dropdownlist.js',
+            'plugins/commandlist.js',
             'plugins/bindfield.js',
             'plugins/calendar.js',
             'plugins/refdata.js',

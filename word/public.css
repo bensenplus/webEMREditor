@@ -14,7 +14,7 @@ a:hover {
 	float: right;
 }
 .header {
-	height: 45px; overflow: hidden; background-color: rgb(109, 195, 234);
+	height: 0px; overflow: hidden; background-color: rgb(109, 195, 234);
 }
 .guide {
 	padding: 0px 20px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-size: 16px; text-decoration: none; float: left;

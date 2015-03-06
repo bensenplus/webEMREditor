@@ -16,8 +16,6 @@
 @import "dropdownlist.css";
    /*绑定控件*/
 @import "bindfield.css";
-   /*日期时间控件*/
-@import "calendar.css";
 
 /*-------不可选中菜单按钮，按需加载-------*/
     /*不可选中菜单按钮--依赖splitbutton*/

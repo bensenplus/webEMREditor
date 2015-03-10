@@ -1,5 +1,5 @@
 .main {
-	margin: 0px; left: 0px; top: 188px; text-align: center; right: 0px; bottom: 0px; position: absolute; -ms-overflow-y: auto;
+	margin: 0px; left: 0px; top: 148px; text-align: center; right: 0px; bottom: 0px; position: absolute; overflow-y: auto;
 }
 .main .container {
 	margin: 10px auto; padding: 0px; width: 900px; text-align: left; background-color: rgb(255, 255, 255);

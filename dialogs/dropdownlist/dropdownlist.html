@@ -9,7 +9,7 @@
             html,body {font-size: 12px;overflow: hidden; }
             .content{padding:5px 0 0 15px;}
             input{width:210px;height:21px;line-height:21px;margin-left: 4px;}
-            table td{padding:5px 0;}
+            table td{padding:5px 0; vertical-align: top ;text-align: right}
         </style>
     </head>
     <body>
@@ -17,12 +17,12 @@
 
             <table>
                 <tr>
-                    <td>ID：</td>
+                    <td>名称：</td>
                     <td><input id="list_id"  value="id001" /></td>
                 </tr>
                 <tr>
                     <td><var id="lang_dropdownlist_labelName"></var></td>
-                    <td><textarea id="value_id"  cols="25" rows="10" >正常&#10;异常&#10;不明</textarea></td>
+                    <td><textarea id="value_id"  style="width:210px;height:150px;line-height:21px;margin-left: 4px;" >正常&#10;异常&#10;不明</textarea></td>
                 </tr>
             </table>
         </div>

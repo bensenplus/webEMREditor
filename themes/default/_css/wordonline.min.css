@@ -540,6 +540,26 @@ button:hover {
     background-image: url("../images/icons/drafts.png");
 }
 
+.wo-btn-save .fui-icon {
+    background-image: url("../images/icons/save.png");
+}
+
+.wo-btn-bindfield .fui-icon {
+    background-image: url("../images/icons/bindfield.png");
+}
+
+.wo-btn-calendar .fui-icon {
+    background-image: url("../images/icons/calendar.png");
+}
+
+.wo-btn-template .fui-icon {
+    background-image: url("../images/icons/template.png");
+}
+
+.wo-btn-dropdownlist .fui-icon {
+    background-image: url("../images/icons/dropdownlist.png");
+}
+
 .wo-btn-wordcount .fui-icon {
     background-image: url("../images/icons/wordcount.png");
 }
@@ -758,6 +778,31 @@ button:hover {
 
 .wo-btn-comment .fui-icon {
     width: 32px;
+    height: 32px;
+}
+
+.wo-btn-save .fui-icon {
+    width: 40px;
+    height: 32px;
+}
+
+.wo-btn-template .fui-icon {
+     width: 40px;
+     height: 32px;
+ }
+
+.wo-btn-dropdownlist .fui-icon {
+    width: 40px;
+    height: 32px;
+}
+
+.wo-btn-calendar .fui-icon {
+    width: 40px;
+    height: 32px;
+}
+
+.wo-btn-bindfield .fui-icon {
+    width: 40px;
     height: 32px;
 }
 
